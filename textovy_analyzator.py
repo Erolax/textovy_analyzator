@@ -85,9 +85,28 @@ for slovo in vyber:
 pocet_velka_pismena = len(velka_pismena)
 print(f"There are {pocet_velka_pismena} uppercase words.")
 
+maly_pismana=list()
 
-pocet_slov_maly=list()
-pocet_cisel=list()
-suma_cisel=list()
+for slovo in vyber:
+    if slovo.islower():
+        maly_pismana.append(slovo)
 
+pocet_malych_pismen = len(maly_pismana)
+print(f"Ther are {pocet_malych_pismen} lowercase words.")
 
+cisla=list()
+
+for slovo in vyber:
+    if slovo.isnumeric():
+        cisla.append(slovo)
+
+pocet_cisel = len(cisla)
+print(f"Ther are {pocet_cisel} numeric strings.")
+
+soucet_cisel = list()
+
+for cislo in range(len(cisla)):
+    cisla[cislo]=int(cisla[cislo])
+suma_cisel=sum(cisla)
+print(f"The sum of all the numbers {suma_cisel}")
+print(oddelovac)
