@@ -1,3 +1,5 @@
+oddelovac= "----------------------------------------"
+
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
@@ -25,3 +27,34 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
+
+text01 = TEXTS[0].split(" ")
+text02 = TEXTS[1].split(" ")
+text03 = TEXTS[2].split(" ")
+
+cisty_text01 = list()
+cisty_text02 = list()
+cisty_text03 = list()
+
+
+registrovany_uzivatel= {"bob":"123","ann":"pass123","mike":"password123","liz":"pass123"}
+
+jmeno=input("Username: ")
+heslo=input("Password: ")
+
+if registrovany_uzivatel.get(jmeno) == heslo:
+    print(oddelovac)
+    print(f"Welcome to the app, {jmeno}")
+    print("We have 3 texts to be analyzed.")
+    print(oddelovac)
+else:
+    print("unregistered user, terminating the program...")
+    quit()
+
+vyber = input("Enter a number btw. 1 and 3 to select text: ")
+
+if not vyber.isnumeric() or int(vyber) not in range(1,4):
+    print("The text with that number doesn't exists, terminating the program...")
+    quit()
+else:
+    print("bnl")
