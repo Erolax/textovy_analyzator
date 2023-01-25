@@ -110,3 +110,18 @@ for cislo in range(len(cisla)):
 suma_cisel=sum(cisla)
 print(f"The sum of all the numbers {suma_cisel}")
 print(oddelovac)
+
+vysledek=dict()
+
+for slovo in upraveny_text:
+    delka = len(slovo)
+    if delka in vysledek:
+        vysledek[delka]+=1
+    else:
+        vysledek[delka]=1
+
+print(f"LEN|\t OCCURENCES\t |NR")
+print(oddelovac)
+
+for delka in sorted(vysledek):
+    print(f"{delka} | {vysledek[delka]*'*'} | {vysledek[delka]}")
