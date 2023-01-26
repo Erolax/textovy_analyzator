@@ -124,4 +124,4 @@ print(f"LEN|\t OCCURENCES\t |NR")
 print(oddelovac)
 
 for delka in sorted(vysledek):
-    print(f"{delka} | {vysledek[delka]*'*'} | {vysledek[delka]}")
+    print(f"{str(delka).ljust(3)}| {vysledek[delka]*'*'}{'|'.rjust(21-(vysledek[delka]))}{vysledek[delka]}")
